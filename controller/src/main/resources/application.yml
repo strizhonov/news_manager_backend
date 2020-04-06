@@ -1,0 +1,14 @@
+server:
+  servlet:
+    contextPath: /news_management
+
+jwt:
+  header: Authorization
+  startsWith: Bearer\u0020
+  secret: my-secret-key
+  expiration: 36000000
+
+oauth:
+    signingKey: TBD
+    tokenPath: /oauth/token
+    authorizationPath: /oauth/authorize
