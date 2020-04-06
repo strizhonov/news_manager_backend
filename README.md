@@ -4,6 +4,22 @@
 Application intended to perform basic operations with news - saving, retrieving,
 updating, removing and searching and is based on Spring and Hibernate frameworks.<br/>
 
+### How to build up the project and start it:<br/>
+- Requirements:<br/>
+    * PostgreSQL 9+.<br/>
+    * Java 8+.<br/>
+    * Maven 3+.<br/>
+- Steps to start:<br/>
+    * Set up database with `./database_creation.sql`.<br/>
+    * Set up database tables with `./database_tables_creation.sql`.<br/>
+    * Sync database settings in `./repository-jpa/src/main/resources/META-INF/persistence.xml` 
+    with your novel database's credentials.
+    * Run `mvn clean install` from `./`.<br/>
+    * Run `mvn spring-boot:run` from `./controller`.<br/>
+    * Index path is `[server path]/news_management`. Server path and domain can be changed in 
+    `./news_management_java/controller/src/main/resources/application.yml`<br/>
+--------------------------------------------------
+
 To interact with client the app uses JSON format.<br/>
 
 News item consists of:<br/>
